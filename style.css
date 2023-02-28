@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #4E4958;
+  background: #E6E6F0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* "quadradão" posicionado ao fundo do header */
+
+body::before {
+  content: '';
+  position: absolute;
+  
+  width: 100%;
+  height: 436px;
+  z-index: -1;
+  background: #535971;
+}
+
+.container {
+  margin: auto;
+  padding: 0 20px;
+  max-width: 1084px;
+}
+
+header {
+  color: #fff;
+  padding: 140px 0 58px 0;
+  width: 417px;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+h1, h3, legend {
+  font-family: 'Staatliches', cursive;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+main {
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  padding: 64px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: none;
+}
+
+fieldset legend {
+  color: #535971;
+  font-size: 24px;
+  width: 100%;
+  margin-bottom: 36px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E6E6F0;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Div de separação de cada input*/
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper input {
+  font-family: 'Poppins', sans-serif;
+  color: #535971;
+  background: #FAFAFC;
+
+  height: 56px;
+  padding-left: 16px;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+}
+
+/* Separar os inputs em 2 colunas (proposta sem grid) */
+
+.col-2 {
+  display: flex;
+  gap: 22px;
+}
+
+/* Dividir o espaço entre as colunas */
+
+.col-2 .input-wrapper {
+  width: 50%;
+}
+
+.input-wrapper span {
+  color: #C1BCCC;
+  font-size: 12px;
+}
+
+.input-wrapper span:hover {
+  color: #535971;
+}
+
+h3 {
+  color: #535971;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Separar os inputs em 3 colunas (proposta sem grid) */
+
+.col-3 {
+  display: flex;
+  gap: 10px;
+}
+
+/* Dividir o espaço para a primeira div (no caso, a data das mentorias) */
+
+.col-3 > div:nth-child(1) {
+  width: 50%;
+}
+
+/* As outras duas divs dividem o restante do espaço entre elas */
+
+.col-3 .input-wrapper {
+  width: 25%;
+  justify-content: end;
+}
+
+footer {
+  background: #535971;
+  height: 160px;
+  padding: 52px 71px;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 100px;
+}
+
+footer input {
+  background: #FF5374;
+  color: #fff;
+  font: 20px 'Staatliches', cursive, normal;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+footer input:hover {
+  background: #df4866;
+  cursor: pointer;
+}
